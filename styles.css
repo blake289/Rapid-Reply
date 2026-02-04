@@ -1,53 +1,53 @@
 /* ==========================================
-   RAPID REPLY - SMB PROFESSIONAL DESIGN
-   Light, Trustworthy, Money-Focused
+   RAPID REPLY - CLEAN PROFESSIONAL DESIGN
+   Bankjoy-inspired: Light, Modern, Trustworthy
    ========================================== */
 
 /* CSS Variables / Design System */
 :root {
-    /* Colors - Light Professional Theme */
-    --color-bg: #F7F9FB;
+    /* Colors - Pure White Theme */
+    --color-bg: #FFFFFF;
     --color-card: #FFFFFF;
-    --color-section-alt: #EFF3F6;
-    --color-card-border: #E2E8F0;
+    --color-section-alt: #F8FAFC;
+    --color-card-border: #E5E7EB;
 
-    /* Text Colors */
-    --color-text-primary: #0F172A;
-    --color-text-secondary: #334155;
-    --color-text-muted: #64748B;
+    /* Text Colors - Dark Navy */
+    --color-text-primary: #0A1628;
+    --color-text-secondary: #475569;
+    --color-text-muted: #6B7280;
 
-    /* Accent Colors - Money & Trust */
-    --color-accent: #16A34A;
-    --color-accent-hover: #15803D;
-    --color-accent-light: #ECFDF5;
-    --color-secondary: #2563EB;
-    --color-success: #16A34A;
+    /* Accent Colors - Bright Blue (Bankjoy style) */
+    --color-accent: #2979FF;
+    --color-accent-hover: #1565D8;
+    --color-accent-light: #EBF4FF;
+    --color-secondary: #2979FF;
+    --color-success: #10B981;
 
     /* Before/After specific */
-    --color-before-bg: #F1F5F9;
-    --color-after-bg: #ECFDF5;
+    --color-before-bg: #F3F4F6;
+    --color-after-bg: #EBF4FF;
 
-    /* Typography */
+    /* Typography - Clean Sans-Serif */
     --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
-    /* Font Sizes */
-    --text-h1-desktop: 56px;
+    /* Font Sizes - Larger Headlines */
+    --text-h1-desktop: 52px;
     --text-h1-mobile: 36px;
     --text-h2-desktop: 36px;
     --text-h2-mobile: 28px;
     --text-h3-desktop: 20px;
-    --text-body: 16px;
-    --text-micro: 13px;
+    --text-body: 17px;
+    --text-micro: 14px;
 
     /* Line Heights */
-    --lh-h1: 1.05;
-    --lh-h2: 1.12;
-    --lh-h3: 1.18;
-    --lh-body: 1.55;
-    --lh-small: 1.45;
+    --lh-h1: 1.15;
+    --lh-h2: 1.2;
+    --lh-h3: 1.3;
+    --lh-body: 1.65;
+    --lh-small: 1.5;
 
     /* Letter Spacing */
-    --ls-headline: -0.02em;
+    --ls-headline: -0.025em;
     --ls-body: 0em;
 
     /* Spacing (8px system) */
@@ -62,23 +62,23 @@
     --space-11: 88px;
 
     /* Section Spacing */
-    --section-gap-mobile: 56px;
-    --section-gap-desktop: 88px;
+    --section-gap-mobile: 64px;
+    --section-gap-desktop: 96px;
 
     /* Container */
-    --container-max: 1120px;
+    --container-max: 1140px;
     --container-padding-mobile: 20px;
     --container-padding-tablet: 32px;
-    --container-padding-desktop: 40px;
+    --container-padding-desktop: 48px;
 
-    /* Border Radius */
-    --radius-btn: 10px;
+    /* Border Radius - Rounder buttons */
+    --radius-btn: 999px;
     --radius-card: 16px;
     --radius-pill: 999px;
 
-    /* Shadows - Soft & Professional */
-    --shadow-card: 0px 6px 20px rgba(15, 23, 42, 0.06);
-    --shadow-card-hover: 0px 8px 28px rgba(15, 23, 42, 0.09);
+    /* Shadows - Softer */
+    --shadow-card: 0px 4px 16px rgba(10, 22, 40, 0.05);
+    --shadow-card-hover: 0px 8px 24px rgba(10, 22, 40, 0.08);
 
     /* Transitions */
     --ease-smooth: cubic-bezier(0.2, 0.8, 0.2, 1);
@@ -209,7 +209,7 @@ p:last-child {
 .btn-primary:hover {
     background: var(--color-accent-hover);
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(22, 163, 74, 0.25);
+    box-shadow: 0 4px 16px rgba(41, 121, 255, 0.35);
 }
 
 .btn-primary:active {
@@ -585,18 +585,88 @@ p:last-child {
 
 .proof-bar {
     padding: var(--space-5) 0;
-    background: #FFFFFF;
-    border-top: 1px solid var(--color-card-border);
-    border-bottom: 1px solid var(--color-card-border);
+    background: var(--color-section-alt);
 }
 
-.proof-bar-label {
-    text-align: center;
+.proof-bar .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+@media (min-width: 768px) {
+    .proof-bar .container {
+        flex-direction: row;
+        justify-content: center;
+        gap: var(--space-5);
+    }
+}
+
+/* Google Reviews Badge */
+.google-reviews-badge {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 20px;
+    background: #FFFFFF;
+    border: 1px solid var(--color-card-border);
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all var(--duration-fast) var(--ease-smooth);
+    box-shadow: var(--shadow-card);
+}
+
+.google-reviews-badge:hover {
+    box-shadow: var(--shadow-card-hover);
+    transform: translateY(-1px);
+}
+
+.google-logo {
+    height: 24px;
+    width: auto;
+}
+
+.reviews-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.stars-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.stars-row .stars {
+    color: #FBBF24;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.stars-row .rating {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-text-primary);
+}
+
+.reviews-count {
+    font-size: 12px;
     color: var(--color-text-muted);
-    font-size: var(--text-micro);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    margin-bottom: var(--space-3);
+}
+
+.proof-divider {
+    display: none;
+    width: 1px;
+    height: 40px;
+    background: var(--color-card-border);
+}
+
+@media (min-width: 768px) {
+    .proof-divider {
+        display: block;
+    }
 }
 
 .industry-badges {
@@ -604,15 +674,14 @@ p:last-child {
     flex-wrap: wrap;
     justify-content: center;
     gap: var(--space-1);
-    margin-bottom: var(--space-3);
 }
 
 .industry-badge {
-    padding: var(--space-1) 12px;
-    font-size: var(--text-micro);
+    padding: 8px 14px;
+    font-size: 13px;
     font-weight: 500;
     color: var(--color-text-secondary);
-    background: var(--color-bg);
+    background: #FFFFFF;
     border: 1px solid var(--color-card-border);
     border-radius: var(--radius-pill);
     transition: all var(--duration-fast) var(--ease-smooth);
